@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cdpkl1pklel70"]
+
+[ext_resource type="Texture2D" uid="uid://djwsff21b87fc" path="res://assets/patient_backgrounds/mühle.jpg" id="1_5ii76"]
+[ext_resource type="Script" uid="uid://b5nbd3si6xtbl" path="res://scripts/patient_area.gd" id="1_x0euy"]
+[ext_resource type="PackedScene" uid="uid://bmfmjyn1aos38" path="res://scenes/patient.tscn" id="2_wlbp1"]
+
+[node name="Mühle" type="Control" unique_id=1204238677]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_x0euy")
+patient_name = "Müller Niklas"
+disease_id = "burnout"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1037932532]
+layout_mode = 0
+offset_left = -32.0
+offset_top = -35.0
+offset_right = 1154.0
+offset_bottom = 721.0
+texture = ExtResource("1_5ii76")
+
+[node name="Patient" parent="." unique_id=1420584978 instance=ExtResource("2_wlbp1")]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 489.0
+offset_right = 632.0
+offset_bottom = 489.0

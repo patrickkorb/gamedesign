@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://cg53isla5oet5"]
+
+[ext_resource type="Texture2D" uid="uid://c12eeq7sh6hbs" path="res://assets/sprites/brewery_background.png" id="1_0um3w"]
+[ext_resource type="Script" uid="uid://bl2xw5y1gc4ga" path="res://scenes/brauerei.gd" id="1_ji5hg"]
+[ext_resource type="PackedScene" uid="uid://dv3iny6kq53jl" path="res://scenes/brewery/brew_slot.tscn" id="2_1ntpn"]
+[ext_resource type="Texture2D" uid="uid://b0fdhf4bact6p" path="res://assets/sprites/ui/book_inventory/inventory_box.png" id="2_krkd8"]
+[ext_resource type="PackedScene" uid="uid://dngfr5bxkx6cj" path="res://scenes/brewery/brew_ingredient_slot.tscn" id="3_fcyds"]
+
+[node name="Brauerei" type="Control" unique_id=2010545269]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ji5hg")
+
+[node name="Background" type="TextureRect" parent="." unique_id=941722395]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_0um3w")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="HerbPage" type="Control" parent="." unique_id=606598210]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = 96.0
+offset_right = 352.0
+offset_bottom = -280.0
+grow_vertical = 2
+
+[node name="PageBackground" type="TextureRect" parent="HerbPage" unique_id=1986273798]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_krkd8")
+stretch_mode = 4
+
+[node name="HerbSlotGrid" type="GridContainer" parent="HerbPage" unique_id=685135636]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = -24.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="BrewIngredientSlot" parent="HerbPage/HerbSlotGrid" unique_id=1014229035 instance=ExtResource("3_fcyds")]
+layout_mode = 2
+
+[node name="BrewIngredientSlot2" parent="HerbPage/HerbSlotGrid" unique_id=1670442804 instance=ExtResource("3_fcyds")]
+layout_mode = 2
+
+[node name="BrewIngredientSlot3" parent="HerbPage/HerbSlotGrid" unique_id=1815705743 instance=ExtResource("3_fcyds")]
+layout_mode = 2
+
+[node name="BrewIngredientSlot4" parent="HerbPage/HerbSlotGrid" unique_id=1543824685 instance=ExtResource("3_fcyds")]
+layout_mode = 2
+
+[node name="BrewIngredientSlot5" parent="HerbPage/HerbSlotGrid" unique_id=2129922735 instance=ExtResource("3_fcyds")]
+layout_mode = 2
+
+[node name="BrewIngredientSlot6" parent="HerbPage/HerbSlotGrid" unique_id=50133289 instance=ExtResource("3_fcyds")]
+layout_mode = 2
+
+[node name="BrewIngredientSlot7" parent="HerbPage/HerbSlotGrid" unique_id=606783890 instance=ExtResource("3_fcyds")]
+layout_mode = 2
+
+[node name="BrewIngredientSlot8" parent="HerbPage/HerbSlotGrid" unique_id=512181880 instance=ExtResource("3_fcyds")]
+layout_mode = 2
+
+[node name="BrewIngredientSlot9" parent="HerbPage/HerbSlotGrid" unique_id=1685005081 instance=ExtResource("3_fcyds")]
+layout_mode = 2
+
+[node name="IngredientSlots" type="HBoxContainer" parent="." unique_id=1002337736]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4965278
+anchor_top = 0.6666667
+anchor_right = 0.4965278
+anchor_bottom = 0.6666667
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 30
+metadata/_edit_use_anchors_ = true
+
+[node name="BrewSlot" parent="IngredientSlots" unique_id=1634464552 instance=ExtResource("2_1ntpn")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="BrewSlot2" parent="IngredientSlots" unique_id=2065369656 instance=ExtResource("2_1ntpn")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+slot_index = 1
+
+[node name="BrewSlot3" parent="IngredientSlots" unique_id=102628596 instance=ExtResource("2_1ntpn")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+slot_index = 2
+
+[node name="BrewButton" type="Button" parent="." unique_id=698618235]
+custom_minimum_size = Vector2(160, 50)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.8425926
+anchor_right = 0.5
+anchor_bottom = 0.8425926
+offset_left = -80.0
+offset_top = -50.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Brauen"
+metadata/_edit_use_anchors_ = true
+
+[node name="ResultSlot" parent="." unique_id=471702887 instance=ExtResource("2_1ntpn")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 1
+anchor_left = 0.47200003
+anchor_top = 0.24700001
+anchor_right = 0.52400005
+anchor_bottom = 0.34
+offset_left = 0.25598145
+offset_top = -0.055999756
+offset_right = -19.648071
+offset_bottom = -20.320007
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)

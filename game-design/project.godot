@@ -1,0 +1,42 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="GameDesign"
+run/main_scene="uid://beyhgk5sova0b"
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Herbs="*uid://ncbm226c1btl"
+Inventory="*uid://dtl5282c1tshj"
+HUD="*uid://boe2g2pxt38ak"
+Potions="*uid://c3jqjt4r65u7j"
+Diseases="*uid://5hafk64lftwe"
+Symptoms="*uid://6aev30ykj7kk"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/scale_mode="integer"
+
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"

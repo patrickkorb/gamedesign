@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cv07eyhws1fbx"]
+
+[ext_resource type="Script" uid="uid://b5nbd3si6xtbl" path="res://scripts/patient_area.gd" id="1_6rqsy"]
+[ext_resource type="Texture2D" uid="uid://desbjf3ncs5vn" path="res://assets/patient_backgrounds/adlige.png" id="1_l3dnq"]
+[ext_resource type="PackedScene" uid="uid://bmfmjyn1aos38" path="res://scenes/patient.tscn" id="2_a2a3k"]
+
+[node name="Adlige" type="Control" unique_id=68319751]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6rqsy")
+patient_name = "Adliger Fred"
+disease_id = "wundbrand"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1020285231]
+layout_mode = 0
+offset_right = 1159.0
+offset_bottom = 665.0
+texture = ExtResource("1_l3dnq")
+
+[node name="Patient" parent="." unique_id=1420584978 instance=ExtResource("2_a2a3k")]
+layout_mode = 0
+offset_left = 687.0
+offset_top = 415.0
+offset_right = 687.0
+offset_bottom = 415.0

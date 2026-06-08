@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://d0xoxl6uqfy4j"]
+
+[ext_resource type="Texture2D" uid="uid://iijraax4nfgx" path="res://assets/patient_backgrounds/bauern.png" id="1_7b23o"]
+[ext_resource type="Script" uid="uid://b5nbd3si6xtbl" path="res://scripts/patient_area.gd" id="1_it84d"]
+[ext_resource type="PackedScene" uid="uid://bmfmjyn1aos38" path="res://scenes/patient.tscn" id="2_7vc1v"]
+
+[node name="Bauern" type="Control" unique_id=1843236986]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_it84d")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1022733858]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 5.0
+offset_right = 1153.0
+offset_bottom = 657.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7b23o")
+
+[node name="Patient" parent="." unique_id=1420584978 instance=ExtResource("2_7vc1v")]
+layout_mode = 0
+offset_left = 604.0
+offset_top = 413.0
+offset_right = 604.0
+offset_bottom = 413.0

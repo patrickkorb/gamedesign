@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://bmfmjyn1aos38"]
+
+[ext_resource type="Texture2D" uid="uid://trjhj1kpgn5w" path="res://assets/patients/bauer-Photoroom.png" id="1_bsxj1"]
+[ext_resource type="Script" uid="uid://cw8ddpcmdgiay" path="res://scenes/patient_view.gd" id="1_vb615"]
+[ext_resource type="PackedScene" uid="uid://c1nouek6kmccl" path="res://scenes/patienten/stat_bar.tscn" id="3_itde6"]
+
+[node name="Patient" type="Control" unique_id=1420584978]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vb615")
+
+[node name="PatientSprite" type="TextureRect" parent="." unique_id=425505235]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_bsxj1")
+
+[node name="SymptomLabel" type="Label" parent="." unique_id=1956141423]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 0
+offset_left = -558.0
+offset_top = -195.0
+offset_right = -158.0
+offset_bottom = 5.0
+theme_override_constants/outline_size = 8
+autowrap_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1622673844]
+custom_minimum_size = Vector2(425, 250)
+layout_mode = 0
+offset_left = -617.0
+offset_top = -215.0
+offset_right = -117.0
+offset_bottom = 35.0
+color = Color(0.78775936, 0.7877592, 0.78775924, 0.16078432)
+
+[node name="StatBars" type="VBoxContainer" parent="." unique_id=1015878638]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 0
+offset_left = 109.0
+offset_top = -211.0
+offset_right = 509.0
+offset_bottom = -11.0
+theme_override_constants/separation = 32
+
+[node name="TemperatureBar" parent="StatBars" unique_id=1840111422 instance=ExtResource("3_itde6")]
+layout_mode = 2
+
+[node name="PainBar" parent="StatBars" unique_id=1575613511 instance=ExtResource("3_itde6")]
+layout_mode = 2
+
+[node name="EnergyBar" parent="StatBars" unique_id=19532175 instance=ExtResource("3_itde6")]
+layout_mode = 2
+
+[node name="StressBar" parent="StatBars" unique_id=1439352954 instance=ExtResource("3_itde6")]
+layout_mode = 2
+
+[node name="TreatmentButtons" type="HBoxContainer" parent="." unique_id=222009037]
+layout_mode = 0
+offset_left = -128.0
+offset_top = -298.0
+offset_right = 171.0
+offset_bottom = -258.0
+theme_override_constants/separation = 20
+
+[node name="GiveItemButton" type="Button" parent="TreatmentButtons" unique_id=734191039]
+layout_mode = 2
+text = "Item geben"
+
+[node name="EndTreatmentButton" type="Button" parent="TreatmentButtons" unique_id=1477133039]
+layout_mode = 2
+text = "Behandlung beenden"

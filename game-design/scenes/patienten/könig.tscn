@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b8tf2hj1fcb8q"]
+
+[ext_resource type="Texture2D" uid="uid://dca5bhou7ubbq" path="res://assets/patient_backgrounds/king.jpg" id="1_56g3p"]
+[ext_resource type="Script" uid="uid://b5nbd3si6xtbl" path="res://scripts/patient_area.gd" id="1_nh5yv"]
+[ext_resource type="PackedScene" uid="uid://bmfmjyn1aos38" path="res://scenes/patient.tscn" id="2_34u5k"]
+
+[node name="König" type="Control" unique_id=1619143459]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nh5yv")
+patient_name = "König Adam"
+disease_id = "kolik"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1919290861]
+layout_mode = 0
+offset_left = -38.0
+offset_top = -78.0
+offset_right = 1178.0
+offset_bottom = 754.0
+texture = ExtResource("1_56g3p")
+
+[node name="Patient" parent="." unique_id=1420584978 instance=ExtResource("2_34u5k")]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 415.0
+offset_right = 651.0
+offset_bottom = 415.0

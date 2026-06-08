@@ -1,0 +1,252 @@
+[gd_scene format=3 uid="uid://bp0cxfy8g5qge"]
+
+[ext_resource type="Script" uid="uid://bu7iv14f5klh7" path="res://scenes/ui/book_inventory.gd" id="1_a4vsl"]
+[ext_resource type="Texture2D" uid="uid://dv6sna60g12yv" path="res://assets/sprites/ui/book_inventory/Book_2.png" id="1_ughdj"]
+[ext_resource type="PackedScene" uid="uid://b4ygp8c7x1r8i" path="res://scenes/ui/inventory_slot.tscn" id="2_t3yxa"]
+[ext_resource type="Texture2D" uid="uid://b0fdhf4bact6p" path="res://assets/sprites/ui/book_inventory/inventory_box.png" id="3_v5jis"]
+[ext_resource type="Texture2D" uid="uid://c3hm6gaiylslb" path="res://assets/sprites/ui/book_inventory/inventory_label.png" id="4_fcs8e"]
+[ext_resource type="Texture2D" uid="uid://cxqvqhkw24m1n" path="res://assets/sprites/ui/book_inventory/inventory_description_label.png" id="5_ecmwp"]
+[ext_resource type="PackedScene" uid="uid://iycltcuae15g" path="res://scenes/ui/bookmark.tscn" id="7_ecmwp"]
+[ext_resource type="Texture2D" uid="uid://d3pg6ydcslltb" path="res://assets/sprites/ui/book_inventory/bookmarks/bookmark_plants.png" id="8_x7ryl"]
+[ext_resource type="Texture2D" uid="uid://c54pqqr8ln8n" path="res://assets/sprites/ui/book_inventory/bookmarks/bookmark_plants_small.png" id="9_iktjk"]
+[ext_resource type="Texture2D" uid="uid://dqajrxbfq7wjx" path="res://assets/sprites/ui/book_inventory/bookmarks/bookmark_potions_big.png" id="10_hdgks"]
+[ext_resource type="Texture2D" uid="uid://bh65kplmbn80p" path="res://assets/sprites/ui/book_inventory/bookmarks/bookmark_misc_big.png" id="11_vy5mh"]
+[ext_resource type="Texture2D" uid="uid://dioyigxg6xbeh" path="res://assets/sprites/ui/book_inventory/bookmarks/bookmark_potions_small.png" id="11_ysc27"]
+[ext_resource type="Texture2D" uid="uid://14j5mwjs7of1" path="res://assets/sprites/ui/book_inventory/bookmarks/bookmark_misc_small.png" id="12_ysc27"]
+
+[sub_resource type="Theme" id="Theme_vy5mh"]
+default_font_size = 8
+
+[node name="BookInventory" type="Control" unique_id=2054498308]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_a4vsl")
+
+[node name="Book" type="TextureRect" parent="." unique_id=1814627555]
+custom_minimum_size = Vector2(320, 224)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.016493054
+anchor_top = 0.75617296
+anchor_right = 0.016493056
+anchor_bottom = 0.75617296
+offset_top = -224.0
+offset_right = 320.0
+grow_vertical = 0
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("1_ughdj")
+stretch_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="InventoryBox" type="TextureRect" parent="Book" unique_id=1790033152]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.28100002
+anchor_top = 0.56
+anchor_right = 0.28100002
+anchor_bottom = 0.56
+offset_left = -63.920006
+offset_top = -70.94
+offset_right = 64.079994
+offset_bottom = 71.06
+texture = ExtResource("3_v5jis")
+
+[node name="InventoryBox2" type="TextureRect" parent="Book" unique_id=1341831977]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.712
+anchor_top = 0.52900004
+anchor_right = 0.712
+anchor_bottom = 0.52900004
+offset_left = -63.839996
+offset_top = -63.99601
+offset_right = 64.16
+offset_bottom = 78.00399
+texture = ExtResource("3_v5jis")
+
+[node name="InventoryLabel" type="TextureRect" parent="Book" unique_id=676016809]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.284
+anchor_top = 0.24300002
+anchor_right = 0.284
+anchor_bottom = 0.24300002
+offset_left = -63.880005
+offset_top = -63.932003
+offset_right = 64.119995
+offset_bottom = 64.06799
+mouse_filter = 2
+texture = ExtResource("4_fcs8e")
+
+[node name="DescriptionLabel" type="TextureRect" parent="Book" unique_id=1778895064]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.284
+anchor_top = 0.24300002
+anchor_right = 0.284
+anchor_bottom = 0.24300002
+offset_left = 73.119995
+offset_top = -63.932003
+offset_right = 201.12
+offset_bottom = 64.06799
+grow_horizontal = 2
+texture = ExtResource("5_ecmwp")
+
+[node name="LeftPage" type="Control" parent="Book" unique_id=1924025078]
+layout_mode = 1
+anchor_left = 0.120000005
+anchor_top = 0.32700002
+anchor_right = 0.432
+anchor_bottom = 0.786
+offset_left = -0.11428833
+offset_top = -0.10518646
+offset_right = 0.022842407
+offset_bottom = -0.0640564
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemSlots" type="GridContainer" parent="Book/LeftPage" unique_id=1992248722]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 20.022865
+offset_bottom = 17.142876
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="InventorySlot" parent="Book/LeftPage/ItemSlots" unique_id=681197003 instance=ExtResource("2_t3yxa")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="Book/LeftPage/ItemSlots" unique_id=1158282252 instance=ExtResource("2_t3yxa")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="Book/LeftPage/ItemSlots" unique_id=1139228579 instance=ExtResource("2_t3yxa")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="Book/LeftPage/ItemSlots" unique_id=1649611578 instance=ExtResource("2_t3yxa")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="Book/LeftPage/ItemSlots" unique_id=2071982444 instance=ExtResource("2_t3yxa")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="Book/LeftPage/ItemSlots" unique_id=1337248442 instance=ExtResource("2_t3yxa")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="Book/LeftPage/ItemSlots" unique_id=288244678 instance=ExtResource("2_t3yxa")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="Book/LeftPage/ItemSlots" unique_id=1551774082 instance=ExtResource("2_t3yxa")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="Book/LeftPage/ItemSlots" unique_id=713681202 instance=ExtResource("2_t3yxa")]
+layout_mode = 2
+
+[node name="Bookmarks" type="HBoxContainer" parent="Book/LeftPage" unique_id=789394176]
+custom_minimum_size = Vector2(0, 32)
+layout_direction = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49154097
+anchor_top = -1.416667
+anchor_right = 0.491541
+anchor_bottom = -1.416667
+offset_left = -40.0
+offset_right = 40.0
+offset_bottom = 100.0
+grow_horizontal = 2
+theme_override_constants/separation = 8
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HerbsBookmark" parent="Book/LeftPage/Bookmarks" unique_id=1322815473 instance=ExtResource("7_ecmwp")]
+layout_mode = 2
+size_flags_vertical = 8
+stretch_mode = 3
+texture_small = ExtResource("9_iktjk")
+texture_large = ExtResource("8_x7ryl")
+category = "herbs"
+
+[node name="PotionsBookmark" parent="Book/LeftPage/Bookmarks" unique_id=1963707078 instance=ExtResource("7_ecmwp")]
+layout_mode = 2
+size_flags_vertical = 8
+texture_small = ExtResource("11_ysc27")
+texture_large = ExtResource("10_hdgks")
+category = "potions"
+
+[node name="MiscBookmark" parent="Book/LeftPage/Bookmarks" unique_id=81893789 instance=ExtResource("7_ecmwp")]
+layout_mode = 2
+size_flags_vertical = 8
+texture_small = ExtResource("12_ysc27")
+texture_large = ExtResource("11_vy5mh")
+category = "misc"
+
+[node name="RightPage" type="Control" parent="Book" unique_id=22199781]
+layout_mode = 1
+anchor_left = 0.717
+anchor_top = 0.565
+anchor_right = 0.717
+anchor_bottom = 0.565
+offset_left = -50.440002
+offset_top = -53.559998
+offset_right = 50.559998
+offset_bottom = 53.440002
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DetailsContainer" type="VBoxContainer" parent="Book/RightPage" unique_id=1828717283]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.001
+anchor_top = 0.5
+anchor_right = -0.001
+anchor_bottom = 0.5
+offset_left = -0.04185278
+offset_top = -53.5
+offset_right = 101.10098
+offset_bottom = 53.5
+grow_vertical = 0
+theme_override_constants/separation = 4
+
+[node name="NameLabel" type="Label" parent="Book/RightPage/DetailsContainer" unique_id=617686918]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 8
+text = "Name: ..."
+
+[node name="CountLabel" type="Label" parent="Book/RightPage/DetailsContainer" unique_id=1706290434]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 8
+text = "Anzahl: ..."
+
+[node name="EffectsHeader" type="Label" parent="Book/RightPage/DetailsContainer" unique_id=1699609716]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 8
+text = "Bekannte Effekte:"
+
+[node name="EffectsList" type="VBoxContainer" parent="Book/RightPage/DetailsContainer" unique_id=920212981]
+layout_mode = 2
+theme = SubResource("Theme_vy5mh")
+
+[node name="GiveButton" type="Button" parent="Book/RightPage/DetailsContainer" unique_id=1770758090]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Geben"

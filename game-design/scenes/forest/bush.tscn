@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d6j8s22k01yq"]
+
+[ext_resource type="Script" uid="uid://rlalhi5l217o" path="res://scripts/bush.gd" id="1_c82hl"]
+[ext_resource type="Shader" uid="uid://c588iwa88lwmv" path="res://shaders/outline.gdshader" id="2_n0qsr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w3hx6"]
+resource_local_to_scene = true
+shader = ExtResource("2_n0qsr")
+shader_parameter/outline_color = Color(0.97892183, 0.9486709, 0.95416194, 1)
+shader_parameter/outline_width = 2.0
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bpfpw"]
+radius = 36.0867
+
+[node name="Bush" type="Area2D" unique_id=1513591471]
+script = ExtResource("1_c82hl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=843887654]
+material = SubResource("ShaderMaterial_w3hx6")
+region_enabled = true
+region_rect = Rect2(2, 2, 2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1743556912]
+shape = SubResource("CircleShape2D_bpfpw")

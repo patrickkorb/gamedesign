@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cioxsbors6hqy"]
+
+[ext_resource type="Texture2D" uid="uid://j88hh4ka2goy" path="res://assets/patient_backgrounds/anciee-pixelart-9644224.png" id="1_aiu3s"]
+[ext_resource type="Script" uid="uid://b5nbd3si6xtbl" path="res://scripts/patient_area.gd" id="1_nile2"]
+[ext_resource type="PackedScene" uid="uid://bmfmjyn1aos38" path="res://scenes/patient.tscn" id="2_ggvok"]
+
+[node name="Kirche" type="Control" unique_id=4437564]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nile2")
+patient_name = "Priester Matthäus"
+disease_id = "schwindsucht"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1237437835]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1153.0
+offset_bottom = 657.0
+texture = ExtResource("1_aiu3s")
+expand_mode = 1
+
+[node name="Patient" parent="." unique_id=1420584978 instance=ExtResource("2_ggvok")]
+layout_mode = 0
+offset_left = 617.0
+offset_top = 428.0
+offset_right = 617.0
+offset_bottom = 428.0

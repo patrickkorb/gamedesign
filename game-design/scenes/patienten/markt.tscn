@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dki2uayrgvcqh"]
+
+[ext_resource type="Script" uid="uid://b5nbd3si6xtbl" path="res://scripts/patient_area.gd" id="1_egmgb"]
+[ext_resource type="Texture2D" uid="uid://csppetoj2yvm7" path="res://assets/patient_backgrounds/markt.jpg" id="1_op6ax"]
+[ext_resource type="PackedScene" uid="uid://bmfmjyn1aos38" path="res://scenes/patient.tscn" id="2_vwlax"]
+
+[node name="Markt" type="Control" unique_id=1452973409]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_egmgb")
+patient_name = "Fischverkäufer Thomas"
+disease_id = "schuettelfrost"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1232184994]
+layout_mode = 0
+offset_right = 1183.0
+offset_bottom = 708.0
+texture = ExtResource("1_op6ax")
+
+[node name="Patient" parent="." unique_id=1420584978 instance=ExtResource("2_vwlax")]
+layout_mode = 0
+offset_left = 690.0
+offset_top = 478.0
+offset_right = 690.0
+offset_bottom = 478.0

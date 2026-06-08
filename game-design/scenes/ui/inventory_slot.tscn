@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://b4ygp8c7x1r8i"]
+
+[ext_resource type="Texture2D" uid="uid://c5pk3a5w0nt60" path="res://assets/sprites/ui/book_inventory/item_slot.png" id="1_ru537"]
+[ext_resource type="Script" uid="uid://c4tq0jgubmiyw" path="res://scenes/ui/inventory_slot.gd" id="2_r4ab7"]
+[ext_resource type="Texture2D" uid="uid://7q2t1ja2u6lf" path="res://assets/sprites/ui/book_inventory/inventory_hover.png" id="3_r4ab7"]
+
+[node name="InventorySlot" type="Button" unique_id=681197003]
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.031000001
+anchor_right = 0.017
+anchor_bottom = 0.031000001
+offset_left = -17.584002
+offset_top = -21.088001
+offset_right = 22.415998
+offset_bottom = 18.911999
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("1_ru537")
+flat = true
+script = ExtResource("2_r4ab7")
+
+[node name="HoverFrame" type="TextureRect" parent="." unique_id=652928144]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.44700003
+anchor_right = 0.5
+anchor_bottom = 0.44700003
+offset_left = -22.0
+offset_top = -20.880001
+offset_right = 24.666668
+offset_bottom = 25.564442
+scale = Vector2(0.9, 0.9)
+mouse_filter = 0
+texture = ExtResource("3_r4ab7")
+expand_mode = 1
+
+[node name="SelectedFrame" type="TextureRect" parent="." unique_id=68008767]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 12.666664
+offset_bottom = 8.666672
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+mouse_filter = 0
+texture = ExtResource("3_r4ab7")
+expand_mode = 1
+
+[node name="Icon" type="TextureRect" parent="." unique_id=1135507159]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.512
+anchor_top = 0.485
+anchor_right = 0.512
+anchor_bottom = 0.485
+offset_left = -18.480001
+offset_top = -13.400002
+offset_right = 234.85333
+offset_bottom = 233.26666
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+stretch_mode = 3
+
+[node name="CountLabel" type="Label" parent="." unique_id=558843928]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.512
+anchor_top = 0.512
+anchor_right = 0.512
+anchor_bottom = 0.512
+offset_left = -50.536003
+offset_top = -17.872004
+offset_right = 13.463999
+offset_bottom = 14.127996
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 10
+text = "23"
+horizontal_alignment = 2
+vertical_alignment = 2

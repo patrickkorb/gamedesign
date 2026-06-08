@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c1nouek6kmccl"]
+
+[ext_resource type="Script" uid="uid://bmnse1dhu7hq8" path="res://scenes/patienten/stat_bar.gd" id="1_glwgo"]
+
+[node name="StatBar" type="VBoxContainer" unique_id=1840111422]
+script = ExtResource("1_glwgo")
+
+[node name="NameLabel" type="Label" parent="." unique_id=41291723]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+
+[node name="BarContainer" type="Control" parent="." unique_id=2080874566]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="BarContainer" unique_id=1612265697]
+custom_minimum_size = Vector2(200, 24)
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0
+step = 1.0
+value = 60.0
+show_percentage = false
+
+[node name="HealthyZone" type="ColorRect" parent="BarContainer" unique_id=1906259155]
+visible = false
+layout_mode = 0
+offset_left = 76.0
+offset_right = 122.0
+offset_bottom = 27.0
+color = Color(0.0039570658, 0.6339544, 0.18915026, 1)

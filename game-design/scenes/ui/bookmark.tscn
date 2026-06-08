@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://iycltcuae15g"]
+
+[ext_resource type="Script" uid="uid://bc5rx5yoy2rw3" path="res://scenes/ui/bookmark.gd" id="1_t5118"]
+
+[node name="Bookmark" type="TextureButton" unique_id=1322815473]
+script = ExtResource("1_t5118")
